@@ -4,10 +4,17 @@
 }
 
     <form asp-action="">
+        <h3>Dropdown List</h3>
         <div class="form-group col-md-4">
             <label asp-for="DepartmentName" class="control-lable"></label>
             <select asp-for="Id" asp-items="ViewBag.Id" class="custom-select">
                 <option value="">Choose Department</option>
             </select>
+        </div>
+
+        <h3>ListBox</h3>
+        <div class="form-group col-md-4">
+            <label asp-for="DepartmentName" class="control-lable"></label>
+            <select asp-for="Id" asp-items="ViewBag.Id" size="5" multiple class="custom-select rounded-0"></select>
         </div>
     </form>
