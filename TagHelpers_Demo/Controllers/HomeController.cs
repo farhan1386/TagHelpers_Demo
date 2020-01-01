@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
 using TagHelpers_Demo.Data;
+using TagHelpers_Demo.Models;
 
 namespace TagHelpers_Demo.Controllers
 {
@@ -19,5 +21,12 @@ namespace TagHelpers_Demo.Controllers
             return View();
         }
 
+        public IActionResult GenderAndDepartment()
+        {
+            var model = new Employee();
+            model.Departments.ToList();
+            return View(model);
+
+        }
     }
 }
